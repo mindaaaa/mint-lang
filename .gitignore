@@ -1,0 +1,26 @@
+# Node modules
+node_modules/
+
+# Output
+dist/
+build/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Logs
+*.log
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Env
+.env
+
+# VSCode settings
+.vscode/
+
+# Coverage and testing
+coverage/
+jest-cache/

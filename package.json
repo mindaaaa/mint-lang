@@ -1,0 +1,29 @@
+{
+  "name": "mint-lang",
+  "version": "0.1.0",
+  "description": "속삭이듯 피어나는 언어, MINT🌱",
+  "bin": {
+    "mint": "./bin/mint.ts"
+  },
+  "main": "main.ts",
+  "scripts": {
+    "start": "ts-node -r tsconfig-paths/register src/main.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "language",
+    "interpreter",
+    "poetic",
+    "typescript",
+    "custom-lang",
+    "mint"
+  ],
+  "author": "mindaaaa",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.15.30",
+    "ts-node": "^10.9.2",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.8.3"
+  }
+}
