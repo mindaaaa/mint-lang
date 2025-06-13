@@ -11,10 +11,19 @@ describe('Lexer 테스트', () => {
     const tokens = lexer.scanTokens();
 
     // then
-    expect(tokens[0].type).toBe(TokenType.PLANT);
-    expect(tokens[1].lexeme).toBe('feeling');
-    expect(tokens[2].type).toBe(TokenType.EQUAL);
-    expect(tokens[3].literal).toBe('gentle');
-    expect(tokens[4].type).toBe(TokenType.EOF);
+    const expected = [
+      { type: TokenType.PLANT, lexeme: 'plant', literal: null },
+      { type: TokenType.IDENTIFIER, lexeme: 'feeling', literal: null },
+      { type: TokenType.EQUAL, lexeme: '=', literal: null },
+      { type: TokenType.STRING, lexeme: '"gentle"', literal: 'gentle' },
+      { type: TokenType.EOF, lexeme: '', literal: null },
+    ];
+
+    expected.forEach((expectedToken, index) => {
+      const actual = tokens[index].toJSON();
+      expect(actual.type).toBe(expectedToken.type);
+      expect(actual.lexeme).toBe(expectedToken.lexeme);
+      expect(actual.literal).toBe(expectedToken.literal);
+    });
   });
 });
