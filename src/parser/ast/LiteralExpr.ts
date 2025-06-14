@@ -1,4 +1,5 @@
-import { Expr, ExprVisitor } from './Expr';
+import { Expr } from './Expr';
+import { ExprVisitor } from './ExprVisitor';
 
 type Literal = string | number | boolean | null;
 

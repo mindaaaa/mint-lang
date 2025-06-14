@@ -1,6 +1,8 @@
 import { TokenType } from '@/lexer/TokenType';
 import { Token } from '@/lexer/Token';
 import { Parser } from '@/parser/Parser';
+import { VarDeclarationStmt } from '@/parser/ast/VarDeclarationStmt';
+import { LiteralExpr } from '@/parser/ast/LiteralExpr';
 
 describe('Parser 클래스', () => {
   test('plant feeling = "gentle" 문장을 AST로 파싱한다', () => {
@@ -16,6 +18,7 @@ describe('Parser 클래스', () => {
 
     // when
     const ast = parser.parse();
+    const stmt = ast[0] as VarDeclarationStmt;
 
     // then
     expect(ast.length).toBe(1);
